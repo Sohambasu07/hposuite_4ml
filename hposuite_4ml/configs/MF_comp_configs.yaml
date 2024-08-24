@@ -1,0 +1,17 @@
+"optimizer_instances":
+  "1":
+    "optimizer": "SMAC_Hyperband"
+    "hyperparameters": {"eta": 2}
+  "2":
+    "optimizer": "SMAC_Hyperband"
+    "hyperparameters": {"eta": 3}
+  "3":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 2}
+  "4":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 3}
+  "5":
+    "optimizer": "SyneTune_BOHB"
+    "hyperparameters": {"eta": 3}
+

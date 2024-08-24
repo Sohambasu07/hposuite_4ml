@@ -1,0 +1,54 @@
+# Red: #FF0000
+# Green: #00FF00
+# Blue: #0000FF
+# Orange: #FFA500
+# Purple: #800080
+# Cyan: #00FFFF
+# Magenta: #FF00FF
+# Yellow: #FFFF00
+# Brown: #A52A2A
+# Pink: #FFC0CB
+
+# Teal: #008080
+# Lime Green: #32CD32
+# Gold: #FFD700
+
+DEHB_eta_3_LightGBM_Regressor: ["solid", "#bc5090", "X"]
+DEHB_eta_3_RF_Regressor: ["solid", "#00ffff", "*"]
+DEHB_eta_3_XGBoost_Regressor: ["solid", 'aqua', "+"]   
+
+DEHB_eta_2_LightGBM_Regressor: ["solid", "#1c4e4f", ">"]
+DEHB_eta_2_RF_Regressor: ["solid", "#e500a4", "D"]
+DEHB_eta_2_XGBoost_Regressor: ["solid", 'darkorange', "o"]
+
+Optuna_sampler_TPE_LightGBM_Regressor: ["solid", "#32CD32", "H"]
+Optuna_sampler_TPE_RF_Regressor: ["--", 'lightseagreen', "8"]
+Optuna_sampler_TPE_XGBoost_Regressor: ["solid", 'red', "3"] 
+
+RandomSearch__LightGBM_Regressor: ["solid", "#798a73", "*"]
+RandomSearch__RF_Regressor: ["--", "gold", "D"]
+RandomSearch__XGBoost_Regressor: [":", "#3f403c", "o"]
+
+SMAC_BO_xi_0.01_LightGBM_Regressor: ["solid", "#4d0187", "v"]
+SMAC_BO_xi_0.01_RF_Regressor: ["--", "#ff8531", ">"]
+SMAC_BO_xi_0.01_XGBoost_Regressor: [":", "#ab0003", "1"]
+
+SMAC_Hyperband_eta_3_LightGBM_Regressor: ["solid", "#337BFF", "2"]
+SMAC_Hyperband_eta_3_RF_Regressor: ["--", "#ba9629", "3"]
+SMAC_Hyperband_eta_3_XGBoost_Regressor: [":", "#5c002c", "<"]
+
+SMAC_Hyperband_eta_2_LightGBM_Regressor: ["solid", "#790f14", "4"]
+SMAC_Hyperband_eta_2_RF_Regressor: ["--", "#008080", "s"]
+SMAC_Hyperband_eta_2_XGBoost_Regressor: ["solid", "#63bce5", "p"]
+
+SMAC_HPOFacade_xi_0.01_LightGBM_Regressor: ["solid", "#b38cb4", "*"]
+SMAC_HPOFacade_xi_0.01_RF_Regressor: ["--", "#ff6361", "h"]
+SMAC_HPOFacade_xi_0.01_XGBoost_Regressor: [":", 'goldenrod', "+"]
+
+SyneTune_BOHB_eta_3_LightGBM_Regressor: ["solid", "#917883", "x"]
+SyneTune_BOHB_eta_3_RF_Regressor: ["--", 'rebeccapurple', "D"]
+SyneTune_BOHB_eta_3_XGBoost_Regressor: [":", 'tomato', "H"]
+
+SyneTune_KDE__LightGBM_Regressor: ["solid", "#d15b56", "|"]
+SyneTune_KDE__RF_Regressor: ["--", "#4c3f49", "p"]
+SyneTune_KDE__XGBoost_Regressor: [":", "#a0fc2d", "8"]

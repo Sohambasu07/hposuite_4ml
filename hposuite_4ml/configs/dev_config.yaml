@@ -1,0 +1,4 @@
+"optimizer_instances":
+  "1":
+    "optimizer": "OptunaOptimizer"
+    "hyperparameters": {"sampler": "TPE"}

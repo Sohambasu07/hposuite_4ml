@@ -1,0 +1,31 @@
+"optimizer_instances":
+  "1":
+    "optimizer": "RandomSearch"
+    "hyperparameters": {}
+  "2":
+    "optimizer": "SMAC_Optimizer" 
+    "hyperparameters": {"xi": 0.01}
+  "3":
+    "optimizer": "SMAC_BO"
+    "hyperparameters": {"xi": 0.01}
+  "4":
+    "optimizer": "SMAC_Hyperband"
+    "hyperparameters": {"eta": 2}
+  "5":
+    "optimizer": "SMAC_Hyperband"
+    "hyperparameters": {"eta": 3}
+  "6":
+    "optimizer": "OptunaOptimizer"
+    "hyperparameters": {"sampler": "TPE"}
+  "7":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 2}
+  "8":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 3}
+  "9":
+    "optimizer": "SyneTune_BOHB"
+    "hyperparameters": {"eta": 3}
+  "10":
+    "optimizer": "SyneTune_KDE"
+    "hyperparameters": {}

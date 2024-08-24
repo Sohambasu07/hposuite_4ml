@@ -1,0 +1,7 @@
+"optimizer_instances":
+  "1":
+    "optimizer": "SMAC_Optimizer"
+    "hyperparameters": {"xi": 0.01}
+  "2":
+    "optimizer": "SMAC_BO"
+    "hyperparameters": {"xi": 0.01}

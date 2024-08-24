@@ -1,0 +1,22 @@
+"optimizer_instances":
+  "1":
+    "optimizer": "RandomSearch"
+    "hyperparameters": {}
+  "2":  # Kinda slow
+    "optimizer": "SMAC_Optimizer" 
+    "hyperparameters": {"xi": 0.01}
+  "3":
+    "optimizer": "SMAC_Hyperband"
+    "hyperparameters": {"eta": 3}
+  "4":
+    "optimizer": "OptunaOptimizer"
+    "hyperparameters": {"sampler": "TPE"}
+  "5":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 3}
+  "6":
+    "optimizer": "SyneTune_BOHB"
+    "hyperparameters": {"eta": 3}
+  "7":
+    "optimizer": "SyneTune_KDE"
+    "hyperparameters": {}

@@ -1,0 +1,28 @@
+{
+    "LightGBM_Regressor": {
+        "SMAC_HPOFacade_xi_0.01": {
+            "bike_sharing": {
+                "config": {
+                    "feature_fraction": 0.8265079921418,
+                    "learning_rate": 0.0035024667524,
+                    "max_depth": 0,
+                    "min_child_samples": 12,
+                    "min_data_in_leaf": 3,
+                    "num_leaves": 192,
+                    "reg_alpha": 0.5666656621821,
+                    "reg_lambda": 0.0023000089882,
+                    "n_estimators": 1000,
+                    "random_state": 95832481,
+                    "device_type": "cpu",
+                    "verbosity": -1
+                },
+                "fidelity": {
+                    "type": "n_estimators",
+                    "value": 1000
+                },
+                "val_score": 0.9393941812872628,
+                "fit_time": 2.671787977218628
+            }
+        }
+    }
+}

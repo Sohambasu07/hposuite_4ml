@@ -1,0 +1,7 @@
+"optimizer_instances":
+  "1":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 2}
+  "2":
+    "optimizer": "DEHB_Optimizer"
+    "hyperparameters": {"eta": 3}
