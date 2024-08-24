@@ -1,12 +1,103 @@
 # HPOSuite for Machine Learning
 
-## Run instructions
+`hposuite_4ml` provides a one-click AutoML pipeline generation. It Interfaces HPO Optimizers from different 
+libraries with Machine Learning models and datasets for benchmarking and comparative analysis. Other features like 
+Meta Learning, Feature Importance and Plotting are also included.
 
-### Python command to reproduce the test predictions:
+> **_NOTE:_**  This package was built for the AutoML course at the University of Freiburg, SS2024.
+
+
+## Installation
+
+To install the repository, first create an environment of your choice and activate it. 
+
+**Virtual Environment**
 
 ```bash
-python -m run --task "y_prop" --budget 100 --exp_config "final_test_config.yaml" --exp_name "final_test_optuna_lgbm" --num_seeds 5
+python3 -m venv hs4ml_env
+source hs4ml_env/bin/activate
 ```
+
+**Conda Environment**
+
+Can also use `conda`, left to individual preference.
+
+```bash
+conda create -n hs4ml_env python=3.10.12
+conda activate hs4ml_env
+```
+
+Then install the repository by running the following command:
+
+```bash
+pip install -e .
+```
+
+You can test that the installation was successful by running the following command:
+```bash
+python -c "import hposuite_4ml"
+```
+
+## Python Version
+Python version 3.10.12 or high is recommended
+
+## Code
+We provide the following:
+
+* `download-openml.py`: A script to download the dataset from openml given a `--task`, corresponding to an OpenML Task ID. We wil provide those suggested as training datasets, prior to us releasing the test dataset.
+
+* `run.py`: A script that loads in a downloaded dataset, executes the HPOSuite AutoML pipeline using the config and CLI arguments
+and then generates predictions for `X_test`, saving those predictions to a file.
+
+## Data
+
+### Sample datasets:
+
+* [y_prop_4_1 (361092)](https://www.openml.org/search?type=task&id=361092&collections.id=299&sort=runs)
+* [Bike_Sharing_Demand (361099)](https://www.openml.org/search?type=task&id=361099&collections.id=299&sort=runs)
+* [Brazilian Houses (361098)](https://www.openml.org/search?type=task&id=361098&collections.id=299&sort=runs)
+
+The OpenML sample datasets can be downloaded using:
+```bash
+python download-openml.py --task <task_id>
+```
+
+This will by default, download the data to the `/data` folder with the following structure.
+The fold numbers, `1, ..., n` are **outer folds**, meaning you can treat each one of them as
+a seperate dataset for training and validation. You can use the `--fold` argument to specify which fold you would like.
+
+```bash
+./data
+├── 361092
+│   ├── 1
+│   │   ├── X_test.parquet
+│   │   ├── X_train.parquet
+│   │   ├── y_test.parquet
+│   │   └── y_train.parquet
+│   ├── 2
+│   │   ├── X_test.parquet
+│   │   ├── X_train.parquet
+│   │   ├── y_test.parquet
+│   │   └── y_train.parquet
+│   ├── 3
+    ...
+├── 361098
+│   ├── 1
+│   │   ├── X_test.parquet
+│   │   ├── X_train.parquet
+│   │   ├── y_test.parquet
+│   │   └── y_train.parquet
+    ...
+```
+
+## Running an initial test
+This will train an AutoML system using Optuna-TPE Sample and XGBoost Regressor and generate predictions for `X_test`:
+```bash
+python hposuite_4ml/run.py --task bike_sharing --num_seeds 1 --output-path preds-s1-bikesh.npy --models xgb --exp_config dev_config.yaml
+```
+
+## Run instructions
+
 
 ### Command line arguments:
 
