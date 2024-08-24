@@ -5,7 +5,7 @@
 ### Python command to reproduce the test predictions:
 
 ```bash
-python -m run --task "exam_dataset" --budget 100 --exp_config "final_test_config.yaml" --exp_name "final_test_optuna_lgbm" --num_seeds 5
+python -m run --task "y_prop" --budget 100 --exp_config "final_test_config.yaml" --exp_name "final_test_optuna_lgbm" --num_seeds 5
 ```
 
 ### Command line arguments:
@@ -48,7 +48,7 @@ and best model pickle file in:
 The code works on the following assumptions, based on the initial repository provided:
 
 1. The `task` argument is the name of the dataset which is mapped to a dataset in the `task_ids` dict in `run.py`
-2. The train set of the entered `task` dataset is a parquet file which is loaded using `./src/automl/data.py`
+2. The train set of the entered `task` dataset is a parquet file which is loaded using `hposuite_4ml/data.py`
 3. The output predictions are stored in `./predictions.npy` which is ignored by git as set in the `.gitignore` file.
 4. Exception to point `3` is when the dataset is named `exam_dataset`. In that case the predictions are saved under `./data/exam_dataset/1/predictions.npy`.
 5. The `exp_name` directory is placed under the `./results` folder
